@@ -18,21 +18,17 @@
       .container-width-8
         color-text(v-for="i in 24" :key="231 + i" :code="231 + i")
 
-    color-table
-
 </template>
 
 <script>
   import Square from './Square'
   import ColorText from './ColorText'
-  import ColorTable from './ColorTable'
 
   export default {
     name: 'HelloWorld',
     components: {
       Square,
       ColorText,
-      ColorTable,
     }
   }
 </script>

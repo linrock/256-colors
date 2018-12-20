@@ -1,29 +1,28 @@
-<template>
-  <div id="app">
-    <header>
-      <div class="container">
-        <h1>xterm 256 colors</h1>
-      </div>
-    </header>
+<template lang="pug">
+  #app
+    header
+      .container
+        h1 xterm 256 colors
 
-    <div class="container">
-      <HelloWorld/>
-      <div class="example">
-        As an example of using color codes, do the following
-      </div>
-    </div>
+    .container
+      color-squares
+      .example
+        | As an example of using color codes, do the following
+      color-table
 
-    <footer></footer>
-  </div>
+    footer
+
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
+  import ColorSquares from './components/ColorSquares.vue'
+  import ColorTable from './components/ColorTable.vue'
 
   export default {
     name: 'app',
     components: {
-      HelloWorld
+      ColorSquares,
+      ColorTable
     }
   }
 </script>

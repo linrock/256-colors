@@ -1,6 +1,6 @@
 <template lang="pug">
   table.color-table
-    theader
+    thead
       tr
         th code
         th hex
