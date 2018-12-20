@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <h1>xterm 256 colors</h1>
+    <header>
+      <h1>xterm 256 colors</h1>
+    </header>
+
     <HelloWorld/>
     <div class="example">
       As an example of using color codes, do the following
     </div>
+
     <footer></footer>
   </div>
 </template>
@@ -24,17 +28,20 @@
   body
     background #222
 
+  header
+    background #111
+
   h1
     color white
     margin-bottom 60px
+    font-size 20px
 
   #app
-    font-family 'Avenir', Helvetica, Arial, sans-serif
+    font-family Courier, serif
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
-    text-align center
     color #2c3e50
-    margin 60px auto
+    margin 40px auto
     width 500px
 
 </style>
