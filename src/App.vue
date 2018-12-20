@@ -2,6 +2,10 @@
   <div id="app">
     <h1>xterm 256 colors</h1>
     <HelloWorld/>
+    <div class="example">
+      As an example of using color codes, do the following
+    </div>
+    <footer></footer>
   </div>
 </template>
 

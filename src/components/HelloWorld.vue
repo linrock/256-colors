@@ -1,37 +1,23 @@
-<template>
-  <div>
-    <div class="color-squares">
-      <div class="s-8x2">
-        <square v-for="i in 16" :key="i-1" :code="i-1"/>
-      </div>
+<template lang="pug">
+  div
+    .color-squares
+      .s-8x2
+        square(v-for="i in 16" :key="i-1" :code="i-1")
+      .container-6x6
+        .s-6x6(v-for="i in 6" :key="`sq-${i}`")
+          square(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="16 + (i-1)*36 + (j-1)")
+      .s-8x2
+        square(v-for="i in 24" :key="231 + i" :code="231 + i")
 
-      <div class="container-6x6">
-        <div v-for="i in 6" :key="`sq-${i}`" class="s-6x6">
-          <square v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="16 + (i-1)*36 + (j-1)"/>
-        </div>
-      </div>
+    .color-text
+      .s-8x2
+        color-text(v-for="i in 16" :key="i-1" :code="i-1")
+      .container-6x6
+        div(v-for="i in 6" :key="`sq-${i}`" class="s-6x6")
+          color-text(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="16 + (i-1)*36 + (j-1)")
+      .s-8x2
+        color-text(v-for="i in 24" :key="231 + i" :code="231 + i")
 
-      <div class="s-8x2">
-        <square v-for="i in 24" :key="231 + i" :code="231 + i"/>
-      </div>
-    </div>
-
-    <div class="color-text">
-      <div class="s-8x2">
-        <color-text v-for="i in 16" :key="i-1" :code="i-1"/>
-      </div>
-
-      <div class="container-6x6">
-        <div v-for="i in 6" :key="`sq-${i}`" class="s-6x6">
-          <color-text v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="16 + (i-1)*36 + (j-1)"/>
-        </div>
-      </div>
-
-      <div class="s-8x2">
-        <color-text v-for="i in 24" :key="231 + i" :code="231 + i"/>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>

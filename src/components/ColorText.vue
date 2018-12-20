@@ -1,5 +1,5 @@
-<template>
-  <div class="color-text" :style="[{ color: COLORS[code] }]">{{ code }}</div>
+<template lang="pug">
+  .color-text(:style="[{ color: COLORS[code] }]") {{ code }}
 </template>
 
 <script>

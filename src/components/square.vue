@@ -1,5 +1,5 @@
-<template>
-  <div class="square" :style="[{ background: COLORS[code] }]"></div>
+<template lang="pug">
+  .square(:style="[{ background: COLORS[code] }]")
 </template>
 
 <script>
