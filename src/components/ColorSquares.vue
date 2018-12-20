@@ -5,7 +5,7 @@
         square(v-for="i in 16" :key="i-1" :code="i-1")
       .container-6x6
         .s-6x6(v-for="i in 6" :key="`sq-${i}`")
-          square(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="16 + (i-1)*36 + (j-1)")
+          square(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="squares[i-1][j-1]")
       .container-width-8
         square(v-for="i in 24" :key="231 + i" :code="231 + i")
 
@@ -23,9 +23,15 @@
 <script>
   import Square from './Square'
   import ColorText from './ColorText'
+  import sixSquares from '../utils/squares'
 
   export default {
     name: 'HelloWorld',
+    data() {
+      return {
+        squares: sixSquares()
+      }
+    },
     components: {
       Square,
       ColorText,
