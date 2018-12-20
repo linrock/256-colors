@@ -1,0 +1,47 @@
+<template lang="pug">
+  .example
+    .container
+      h2 Using xterm color codes
+      div
+        | For an example of using xterm color codes, try the
+        | following command in bash or your favorite terminal
+      code
+        | echo $(tput setaf 214)256
+        | $(tput setaf 202)colors
+      div
+        | Or try the version using ANSI control sequences
+      code
+        | echo -e "\e[38;5;214m256 \e[38;5;202mcolors"
+      div
+        | Both of them will show a colored output
+      code
+        color-span(:code="214") 256
+        color-span(:code="202") colors
+
+</template>
+
+<script>
+  import ColorSpan from './ColorSpan'
+
+  export default {
+    components: {
+      ColorSpan
+    }
+  }
+</script>
+
+<style lang="stylus">
+  .example
+    color white
+    padding 40px 0
+    background #333
+    line-height 24px
+
+  code
+    border-radius 3px
+    padding 8px 16px
+    background #111
+    margin 20px 0
+    display block
+
+</style>

@@ -3,38 +3,45 @@
     header
       .container
         h1 xterm 256 colors
-
-    .container
-      color-squares
-      .example
-        | As an example of using color codes, do the following
-      color-table
-
+    color-squares
+    example
+    color-table
     footer
+      .container
+        a(href="https://github.com/linrock/256-colors") source code
 
 </template>
 
 <script>
   import ColorSquares from './components/ColorSquares.vue'
   import ColorTable from './components/ColorTable.vue'
+  import Example from './components/Example.vue'
 
   export default {
     name: 'app',
     components: {
       ColorSquares,
-      ColorTable
+      ColorTable,
+      Example
     }
   }
 </script>
 
 <style lang="stylus">
   body
-    background #222
     margin 0
 
   header
     background #111
     padding 8px 0
+
+  footer
+    background #111
+    padding 12px 0
+    color white
+
+    a
+      color inherit
 
   h1
     color white
