@@ -4,16 +4,22 @@
       h2 Using xterm color codes
       div
         | For an example of using xterm color codes, try the
-        | following command in bash or your favorite terminal
+        | following command in bash or your favorite xterm terminal
+        | that supports 256 colors
       code
         | echo $(tput setaf 214)256
         | $(tput setaf 202)colors
       div
-        | Or try the version using ANSI control sequences
+        | Or try the equivalent command using ANSI control sequences
       code
         | echo -e "\e[38;5;214m256 \e[38;5;202mcolors"
       div
-        | Both of them will show a colored output
+        | You can also use printf in bash
+      code
+        | printf "$(tput setaf 214)256
+        | $(tput setaf 202)colors"
+      div
+        | All of the above commands will show a colored output
       code
         color-span(:code="214") 256
         color-span(:code="202") colors
