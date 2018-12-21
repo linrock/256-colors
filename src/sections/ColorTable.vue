@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import Square from './Square'
+  import Square from '../components/Square'
   import COLORS from '../utils/colors'
 
   export default {

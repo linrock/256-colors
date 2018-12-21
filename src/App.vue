@@ -5,6 +5,7 @@
         h1 xterm 256 colors
     color-squares
     example
+    prompt-example
     color-table
     footer
       .container
@@ -13,16 +14,18 @@
 </template>
 
 <script>
-  import ColorSquares from './components/ColorSquares.vue'
-  import ColorTable from './components/ColorTable.vue'
-  import Example from './components/Example.vue'
+  import ColorSquares from './sections/ColorSquares.vue'
+  import ColorTable from './sections/ColorTable.vue'
+  import Example from './sections/Example.vue'
+  import PromptExample from './sections/PromptExample.vue'
 
   export default {
     name: 'app',
     components: {
       ColorSquares,
       ColorTable,
-      Example
+      Example,
+      PromptExample
     }
   }
 </script>
@@ -47,6 +50,11 @@
     color white
     margin 0
     font-size 20px
+
+  h2
+    color #ddd
+    font-weight bold
+    margin 0 0 25px
 
   #app
     font-family Courier, serif

@@ -27,7 +27,7 @@
 </template>
 
 <script>
-  import ColorSpan from './ColorSpan'
+  import ColorSpan from '../components/ColorSpan'
 
   export default {
     components: {
@@ -36,12 +36,12 @@
   }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   .example
     color white
     padding 40px 0
     background #333
-    line-height 20px
+    line-height 22px
     font-size 14px
 
   code

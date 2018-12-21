@@ -24,8 +24,8 @@
 </template>
 
 <script>
-  import Square from './Square'
-  import ColorText from './ColorText'
+  import Square from '../components/Square'
+  import ColorText from '../components/ColorText'
   import sixSquares from '../utils/squares'
 
   export default {
