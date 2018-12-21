@@ -55,7 +55,7 @@
     color #2c3e50
 
   .container
-    width 500px
+    width 520px
     margin 0 auto
 
   .main

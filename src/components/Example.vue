@@ -10,14 +10,14 @@
         | echo $(tput setaf 214)256
         | $(tput setaf 202)colors
       div
-        | Or try the equivalent command using ANSI control sequences
-      code
-        | echo -e "\e[38;5;214m256 \e[38;5;202mcolors"
-      div
         | You can also use printf in bash
       code
         | printf "$(tput setaf 214)256
         | $(tput setaf 202)colors"
+      div
+        | Or try the equivalent command using ANSI control sequences
+      code
+        | echo -e "\e[38;5;214m256 \e[38;5;202mcolors"
       div
         | All of the above commands will show a colored output
       code
@@ -41,7 +41,8 @@
     color white
     padding 40px 0
     background #333
-    line-height 24px
+    line-height 20px
+    font-size 14px
 
   code
     border-radius 3px
