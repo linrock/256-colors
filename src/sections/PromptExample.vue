@@ -1,11 +1,11 @@
 <template lang="pug">
-  .example
+  #shell-prompt.example
     .container
-      h2 Color codes in a bash prompt
+      h2 Color codes in a shell prompt
       div
-        | When using color codes as part of a prompt, make sure to
-        | enclose them with brackets to tell the shell that they're
-        | non-printing characters that take up no space.
+        | When using color codes as part of a shell (bash, zsh) prompt,
+        | make sure to enclose them with brackets to tell the shell that
+        | they're non-printing characters that take up no space.
       code
         | \[$(tput setaf 214)256\]
       div 

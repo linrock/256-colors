@@ -1,7 +1,6 @@
 <template lang="pug">
-  span(:style="[{ color: COLORS[code] }]")
+  span(:style="[{ [bg ? `background` : `color`]: COLORS[code] }]")
     slot
-    | &nbsp;
 
 </template>
 
@@ -13,6 +12,10 @@
       code: {
         type: Number,
         required: true
+      },
+      bg: {
+        type: Boolean,
+        required: false,
       }
     },
 
@@ -23,3 +26,10 @@
     }
   }
 </script>
+
+<style scoped lang="stylus">
+  span
+    display inline-block
+    line-height 19px
+
+</style>

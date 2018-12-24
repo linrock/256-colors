@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    section.color-squares
+    section#background-colors.color-squares
       .container
         .container-width-8
           square(v-for="i in 16" :key="i-1" :code="i-1") {{ i - 1 }}
@@ -11,7 +11,7 @@
         .container-width-8
           square(v-for="i in 24" :key="231 + i" :code="231 + i") {{ 231 + i }}
 
-    section.color-text
+    section#foreground-colors.color-text
       .container
         .container-width-8
           color-text(v-for="i in 16" :key="i-1" :code="i-1")

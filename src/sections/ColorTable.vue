@@ -1,6 +1,11 @@
 <template lang="pug">
-  section
+  section#table-of-color-codes
     .container
+      h2 Table of color codes
+      p
+        | The colors in the table show the default xterm colors. If you've modified
+        | your terminal color scheme, the first 16 color codes will show
+        | up differently.
       table.color-table
         thead
           tr
@@ -40,6 +45,12 @@
     color #ccc
     background #222
     padding 40px 0 80px
+
+  p
+    color white
+    margin-bottom 35px
+    line-height 22px
+    font-size 14px
 
   table
     th
