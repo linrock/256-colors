@@ -1,27 +1,27 @@
 <template lang="pug">
-  #app
-    header
-      .container
-        h1 xterm 256 colors
-        h3 A guide to using colors in your terminal
-        nav
-          a(href="#background-colors")
-            color-span(code="202") Background colors
-          a(href="#foreground-colors")
-            color-span(code="208") Foreground colors
-          a(href="#xterm-color-codes")
-            color-span(code="214") Using xterm color codes
-          a(href="#shell-prompt")
-            color-span(code="220") Color codes in a shell prompt
-          a(href="#table-of-color-codes")
-            color-span(code="226") Table of color codes
-    color-squares
-    example
-    prompt-example
-    color-table
-    footer
-      .container
-        a(href="https://github.com/linrock/256-colors") source code
+#app
+  header
+    .container
+      h1 xterm 256 colors
+      h3 A guide to using colors in your terminal
+      nav
+        a(href="#background-colors")
+          color-span(code="202") Background colors
+        a(href="#foreground-colors")
+          color-span(code="208") Foreground colors
+        a(href="#xterm-color-codes")
+          color-span(code="214") Using xterm color codes
+        a(href="#shell-prompt")
+          color-span(code="220") Color codes in a shell prompt
+        a(href="#table-of-color-codes")
+          color-span(code="226") Table of color codes
+  color-squares
+  example
+  prompt-example
+  color-table
+  footer
+    .container
+      a(href="https://github.com/linrock/256-colors") source code
 
 </template>
 

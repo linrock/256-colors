@@ -1,6 +1,6 @@
 <template lang="pug">
-  .square(:style="[{ background: COLORS[code] }]")
-    slot
+.square(:style="[{ background: COLORS[code] }]")
+  slot
 
 </template>
 

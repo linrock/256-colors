@@ -1,6 +1,6 @@
 <template lang="pug">
-  span(:style="[{ [bg ? `background` : `color`]: COLORS[code] }]")
-    slot
+span(:style="[{ [bg ? `background` : `color`]: COLORS[code] }]")
+  slot
 
 </template>
 

@@ -1,25 +1,25 @@
 <template lang="pug">
-  div
-    section#background-colors.color-squares
-      .container
-        .container-width-8
-          square(v-for="i in 16" :key="i-1" :code="i-1") {{ i - 1 }}
-        .container-6x6
-          .s-6x6(v-for="i in 6" :key="`sq-${i}`")
-            square(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="squares[i-1][j-1]")
-              | {{ squares[i-1][j-1] }}
-        .container-width-8
-          square(v-for="i in 24" :key="231 + i" :code="231 + i") {{ 231 + i }}
+div
+  section#background-colors.color-squares
+    .container
+      .container-width-8
+        square(v-for="i in 16" :key="i-1" :code="i-1") {{ i - 1 }}
+      .container-6x6
+        .s-6x6(v-for="i in 6" :key="`sq-${i}`")
+          square(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="squares[i-1][j-1]")
+            | {{ squares[i-1][j-1] }}
+      .container-width-8
+        square(v-for="i in 24" :key="231 + i" :code="231 + i") {{ 231 + i }}
 
-    section#foreground-colors.color-text
-      .container
-        .container-width-8
-          color-text(v-for="i in 16" :key="i-1" :code="i-1")
-        .container-6x6
-          .s-6x6(v-for="i in 6" :key="`sq-${i}`")
-            color-text(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="squares[i-1][j-1]")
-        .container-width-8
-          color-text(v-for="i in 24" :key="231 + i" :code="231 + i")
+  section#foreground-colors.color-text
+    .container
+      .container-width-8
+        color-text(v-for="i in 16" :key="i-1" :code="i-1")
+      .container-6x6
+        .s-6x6(v-for="i in 6" :key="`sq-${i}`")
+          color-text(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="squares[i-1][j-1]")
+      .container-width-8
+        color-text(v-for="i in 24" :key="231 + i" :code="231 + i")
 
 </template>
 
