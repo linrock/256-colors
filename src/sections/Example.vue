@@ -25,7 +25,7 @@
       | &nbsp;
       color-span(:code="202") colors
     div
-      | For background text, you can use `tput setab`
+      | For colored background text, you can use `tput setab`
     code
       | echo $(tput setab 214)256
       | $(tput setab 202)colors
