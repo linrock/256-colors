@@ -53,6 +53,8 @@ section#table-of-color-codes
     font-size 14px
 
   table
+    color #ccc
+
     th
       text-align left
       padding-right 30px
