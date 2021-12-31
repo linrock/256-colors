@@ -1,9 +1,10 @@
 <template lang="pug">
 #app
   header
-    .container
-      h1 xterm 256 colors
-      h3 A guide to using colors in your terminal
+    .container.flex-responsive
+      aside
+        h1 xterm 256 colors
+        h3 A guide to using colors in text terminals
       nav
         a(href="#background-colors")
           color-span(code="202") Background colors
@@ -54,18 +55,22 @@
     margin 0
     padding 0
 
+  html
+    box-sizing border-box
+
+  *
+    box-sizing inherit
+
   header
     background #111
-    padding 8px 0
+    padding 2rem 0 1rem
 
   nav
     color white
     background #111
-    margin 15px 0
     a
       display block
-      padding 2px 0
-      font-size 14px
+      padding-bottom 1rem
       text-decoration none
       &:hover span
         color white !important
@@ -81,12 +86,12 @@
 
   h1
     color #9e9e9e
-    font-size 20px
-    margin 0
+    font-size 1rem
+    margin 0 0 1rem 0
 
   h3
     color #e4e4e4
-    font-size 16px
+    font-size 1rem
     margin 0
 
   h2
@@ -95,8 +100,23 @@
     margin 0 0 25px
 
   .container
-    width 520px
+    width 60rem
+    padding 2rem
     margin 0 auto
+
+  .flex-responsive
+    display flex
+
+  @media screen and (max-width: 56rem)
+    .flex-responsive
+      display block
+      width 100%
+
+      > *
+        width 100%
+
+  aside
+    width 50%
 
   .main
     margin 40px auto
