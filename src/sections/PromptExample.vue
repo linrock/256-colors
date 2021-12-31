@@ -1,5 +1,5 @@
 <template lang="pug">
-#shell-prompt.example
+section#shell-prompt
   .container
     h2 Color codes in a shell prompt
     div
@@ -36,18 +36,9 @@
 </script>
 
 <style lang="stylus" scoped>
-  .example
+  section
     color white
-    padding 40px 0
+    padding 2rem 0
     background #1f1f1f
-    line-height 22px
-    font-size 14px
-
-  code
-    border-radius 3px
-    padding 8px 16px
-    background #111
-    margin 20px 0
-    display block
 
 </style>

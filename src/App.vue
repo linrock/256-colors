@@ -92,12 +92,22 @@
 
   h2
     color #ddd
+    font-size 1rem
+    margin 0
+    margin-bottom 1rem
     font-weight bold
 
   h3
     color #e4e4e4
     font-size 1rem
     margin 0
+
+  code
+    border-radius 3px
+    padding 1rem
+    background #111
+    margin 1rem 0
+    display block
 
   header aside
     width 50%

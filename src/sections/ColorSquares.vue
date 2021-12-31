@@ -146,11 +146,4 @@ div
     padding-right 2rem
     line-height 1.5rem
 
-  code
-    border-radius 3px
-    padding 8px 16px
-    background #111
-    margin 20px 0
-    display block
-
 </style>

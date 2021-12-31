@@ -1,5 +1,5 @@
 <template lang="pug">
-#xterm-color-codes.example
+section#xterm-color-codes.example
   .container
     h2 Using xterm color codes
     div
@@ -48,16 +48,9 @@
 </script>
 
 <style lang="stylus" scoped>
-  .example
+  section
     color white
     padding 2rem 0
     background #333
-
-  code
-    border-radius 3px
-    padding 0.5rem 1rem
-    background #111
-    margin 20px 0
-    display block
 
 </style>
