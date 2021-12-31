@@ -16,10 +16,11 @@
           color-span(code="220") Color codes in a shell prompt
         a(href="#table-of-color-codes")
           color-span(code="226") Table of color codes
-  color-squares
-  example
-  prompt-example
-  color-table
+  main
+    color-squares
+    example
+    prompt-example
+    color-table
   footer
     .container
       a(href="https://robotmoon.com") home
@@ -87,17 +88,19 @@
   h1
     color #9e9e9e
     font-size 1rem
-    margin 0 0 1rem 0
+    margin 0
+
+  h2
+    color #ddd
+    font-weight bold
 
   h3
     color #e4e4e4
     font-size 1rem
     margin 0
 
-  h2
-    color #ddd
-    font-weight bold
-    margin 0 0 25px
+  header aside
+    width 50%
 
   .container
     width 60rem
@@ -107,18 +110,13 @@
   .flex-responsive
     display flex
 
-  @media screen and (max-width: 56rem)
+  @media screen and (max-width: 60rem)
+    .container
+      width 100%
+      > *
+        width 100% !important
+
     .flex-responsive
       display block
-      width 100%
-
-      > *
-        width 100%
-
-  aside
-    width 50%
-
-  .main
-    margin 40px auto
 
 </style>

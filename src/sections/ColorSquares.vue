@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   section#background-colors.color-squares
-    .container
+    .container.flex-responsive
       aside
         h3 Background colors
         p
@@ -40,7 +40,7 @@ div
                  :code="231 + i") {{ 231 + i }}
 
   section#foreground-colors.color-text
-    .container
+    .container.flex-responsive
       aside
         h3 Foreground colors
         div
@@ -99,9 +99,6 @@ div
 
 <style lang="stylus" scoped>
   square-size = 2rem
-
-  .container
-    display flex
 
   section
     padding-top 2rem
