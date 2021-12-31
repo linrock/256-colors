@@ -21,6 +21,7 @@
   color-table
   footer
     .container
+      a(href="https://robotmoon.com") home
       a(href="https://github.com/linrock/256-colors") source code
 
 </template>
@@ -72,10 +73,11 @@
   footer
     color white
     background #111
-    padding 12px 0
+    padding 1rem 0
 
     a
       color inherit
+      margin-right 2rem
 
   h1
     color #9e9e9e
