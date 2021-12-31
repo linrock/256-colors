@@ -4,28 +4,16 @@ div
     .container.flex-responsive
       aside
         h3 Background colors
-        p
-          | These are background colors
         div
-          | For an example of using xterm color codes, try the
-          | following command in bash or your favorite xterm terminal.
-          | Most of them have 256-color support these days.
+          | For colored background text, try `tput setab`
         code
-          | echo $(tput setaf 214)256
-          | $(tput setaf 202)colors
+          | echo $(tput setab 18)256
+          | $(tput setab 20)colors
         div
-          | You can also use printf in bash
+          | The above gives you the below colored output
         code
-          | printf "$(tput setaf 214)256
-          | $(tput setaf 202)colors"
-        div
-          | All of the above commands will show colored foreground text
-        code
-          color-span(:code="214") 256
-          | &nbsp;
-          color-span(:code="202") colors
-        div
-          | For colored background text, you can use `tput setab`
+          color-span(:code="18" :bg="true") 256&nbsp;
+          color-span(:code="20" :bg="true") colors
 
       .squares-256
         .container-width-8
@@ -44,9 +32,7 @@ div
       aside
         h3 Foreground colors
         div
-          | For an example of using xterm color codes, try the
-          | following command in bash or your favorite xterm terminal.
-          | Most of them have 256-color support these days.
+          | For colored foreground text, try `tput setaf`
         code
           | echo $(tput setaf 214)256
           | $(tput setaf 202)colors
@@ -56,13 +42,11 @@ div
           | printf "$(tput setaf 214)256
           | $(tput setaf 202)colors"
         div
-          | All of the above commands will show colored foreground text
+          | Both the above will show colored foreground text
         code
           color-span(:code="214") 256
           | &nbsp;
           color-span(:code="202") colors
-        div
-          | For colored background text, you can use `tput setab`
 
       .squares-256
         .container-width-8.top
@@ -82,6 +66,7 @@ div
 <script>
   import Square from '../components/Square'
   import ColorText from '../components/ColorText'
+  import ColorSpan from '../components/ColorSpan'
   import sixSquares from '../utils/squares'
 
   export default {
@@ -93,6 +78,7 @@ div
     components: {
       Square,
       ColorText,
+      ColorSpan,
     }
   }
 </script>
@@ -101,14 +87,14 @@ div
   square-size = 2rem
 
   section
-    padding-top 2rem
-    padding-bottom 2.5rem
-    letter-spacing -1px
+    padding 2rem 0
 
     &.color-squares
+      letter-spacing -1px
       background #222
 
     &.color-text
+      letter-spacing -1px
       background #1f1f1f
 
   .squares-256

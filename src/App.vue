@@ -101,6 +101,7 @@
     color #e4e4e4
     font-size 1rem
     margin 0
+    margin-bottom 2rem
 
   code
     border-radius 3px

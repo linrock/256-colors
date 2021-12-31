@@ -46,12 +46,6 @@ section#table-of-color-codes
     background #222
     padding 40px 0 80px
 
-  p
-    color white
-    margin-bottom 35px
-    line-height 22px
-    font-size 14px
-
   table
     color #ccc
 
