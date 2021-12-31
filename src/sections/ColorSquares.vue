@@ -6,7 +6,9 @@ div
         square(v-for="i in 16" :key="i-1" :code="i-1") {{ i - 1 }}
       .container-6x6
         .s-6x6(v-for="i in 6" :key="`sq-${i}`")
-          square(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="squares[i-1][j-1]")
+          square(v-for="j in 36"
+                 :key="16 + (i-1)*36 + (j-1)"
+                 :code="squares[i-1][j-1]")
             | {{ squares[i-1][j-1] }}
       .container-width-8
         square(v-for="i in 24" :key="231 + i" :code="231 + i") {{ 231 + i }}
@@ -17,7 +19,9 @@ div
         color-text(v-for="i in 16" :key="i-1" :code="i-1")
       .container-6x6
         .s-6x6(v-for="i in 6" :key="`sq-${i}`")
-          color-text(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)" :code="squares[i-1][j-1]")
+          color-text(v-for="j in 36"
+                     :key="16 + (i-1)*36 + (j-1)"
+                     :code="squares[i-1][j-1]")
       .container-width-8
         color-text(v-for="i in 24" :key="231 + i" :code="231 + i")
 
@@ -43,7 +47,7 @@ div
 </script>
 
 <style lang="stylus" scoped>
-  square-size = 26px
+  square-size = 2rem
 
   .container-width-8
     width square-size * 8
@@ -53,8 +57,8 @@ div
     padding square-size 0
 
   .container-6x6
-    width square-size * 6 * 3 + square-size * 2
-    height square-size * 6 * 2 + square-size
+    width square-size * 6 * 2 + square-size
+    height square-size * 6 * 3 + square-size * 2
     display flex
     flex-wrap wrap
     justify-content space-between
@@ -69,13 +73,13 @@ div
   .square
     width square-size
     height square-size
-    font-size 12px
-    letter-spacing -1px
     text-align center
     line-height square-size
 
   section
-    padding-bottom 40px
+    padding-bottom 2.5rem
+    font-size 0.8rem
+    letter-spacing -1px
 
     &.color-squares
       background #222

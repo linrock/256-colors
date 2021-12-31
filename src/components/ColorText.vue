@@ -21,11 +21,10 @@
 </script>
 
 <style lang="stylus" scoped>
-  square-size = 26px
+  square-size = 2rem
 
   .color-text
     font-family Courier
-    font-size 12px
     width square-size
     height square-size
     line-height square-size
