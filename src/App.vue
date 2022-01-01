@@ -16,6 +16,8 @@
           color-span(code="220") Color codes in a shell prompt
         a(href="#table-of-color-codes")
           color-span(code="226") Table of color codes
+        a(href="#json-array-of-color-codes")
+          color-span(code="229") JSON array of color codes
   main
     section#background-colors.color-squares
       .container.flex-responsive
