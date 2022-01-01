@@ -77,8 +77,64 @@
           .container-width-8.bottom
             color-text(v-for="i in 24" :key="231 + i"
                        :code="231 + i")
-    example
-    prompt-example
+    section#xterm-color-codes.example
+      .container
+        h2 Using xterm color codes
+        div
+          | For an example of using xterm color codes, try the
+          | following command in bash or your favorite xterm terminal.
+          | Most of them have 256-color support these days.
+        code
+          | echo $(tput setaf 214)256
+          | $(tput setaf 202)colors
+        div
+          | You can also use printf in bash
+        code
+          | printf "$(tput setaf 214)256
+          | $(tput setaf 202)colors"
+        div
+          | Or try the equivalent command using ANSI control sequences
+        code
+          | echo -e "\e[38;5;214m256 \e[38;5;202mcolors"
+        div
+          | All of the above commands will show colored foreground text
+        code
+          color-span(:code="214") 256
+          | &nbsp;
+          color-span(:code="202") colors
+        div
+          | For colored background text, you can use `tput setab`
+        code
+          | echo $(tput setab 214)256
+          | $(tput setab 202)colors
+        div
+          | Which gives you the following colored output
+        code
+          color-span(:code="214" :bg="true") 256&nbsp;
+          color-span(:code="202" :bg="true") colors
+    section#shell-prompt
+      .container
+        h2 Color codes in a shell prompt
+        div
+          | When using color codes as part of a shell (bash, zsh) prompt,
+          | make sure to enclose them with brackets to tell the shell that
+          | they're non-printing characters that take up no space.
+        code
+          | \[$(tput setaf 214)256\]
+        div
+          | Without brackets, the command prompt will wrap incorrectly
+          | when typing a really long command. You may also want to
+          | tell the shell to reset the colors at the end of the prompt.
+        code
+          | \[$(tput sgr0)\]
+        div
+          | Here's a simple example of a colored bash prompt
+        code
+          | export PS1='\[$(tput setaf 82)\]\W $ \[$(tput sgr0)\]'
+        div
+          | Which gives you this when in the home directory
+        code
+          color-span(:code="82") ~ $
     section#table-of-color-codes
       .container
         h2 Table of color codes
@@ -111,8 +167,6 @@
 <script>
   import ColorSpan from './components/ColorSpan'
   import ColorText from './components/ColorText'
-  import Example from './sections/Example'
-  import PromptExample from './sections/PromptExample'
   import Square from './components/Square'
   import COLORS from './utils/colors'
   import sixSquares from './utils/squares'
@@ -128,8 +182,6 @@
       ColorSpan,
       ColorText,
       Square,
-      Example,
-      PromptExample,
     }
   }
 </script>
@@ -256,7 +308,15 @@
     padding-right 2rem
     line-height 1.5rem
 
+  section#xterm-color-codes.example
+    color white
+    padding 2rem 0
+    background #333
 
+  section#shell-prompt
+    color white
+    padding 2rem 0
+    background #1f1f1f
 
   section#table-of-color-codes
     color #ccc
