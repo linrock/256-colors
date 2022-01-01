@@ -135,27 +135,32 @@
           | Which gives you this when in the home directory
         code
           color-span(:code="82") ~ $
-    section#table-of-color-codes
-      .container
-        h2 Table of color codes
-        p
-          | The colors in the table show the default xterm colors.
-          | If you've modified your terminal color scheme, the first
-          | 16 color codes will show up differently.
-        table.color-table
-          thead
-            tr
-              th color
-              th code
-              th hex
-              th ansi color code
-          tbody
-            tr(v-for="i in 256" :key="i")
-              td
-                square(:code="i - 1")
-              td {{ i-1 }}
-              td {{ COLORS[i-1] }}
-              td \e[38;5;{{ i - 1 }}m
+    section.table-and-array-of-codes
+      .container.flex-responsive
+        section#table-of-color-codes
+          h2 Table of color codes
+          p
+            | The colors in the table show the default xterm colors.
+            | If you've modified your terminal color scheme, the first
+            | 16 color codes will show up differently.
+          table.color-table
+            thead
+              tr
+                th color
+                th code
+                th hex
+                th ansi color code
+            tbody
+              tr(v-for="i in 256" :key="i")
+                td
+                  square(:code="i - 1")
+                td {{ i-1 }}
+                td {{ COLORS[i-1] }}
+                td \e[38;5;{{ i - 1 }}m
+        section#json-array-of-color-codes
+          h2 JSON array of color codes
+          code
+            | {{ colorsArrayStr }}
   footer
     .container
       a(href="https://robotmoon.com") home
@@ -173,9 +178,12 @@
 
   export default {
     data() {
+      const colorsArrayStr =
+        '[\n' + COLORS.map((color) => `  ${color},`).join('\n') + '\n]';
       return {
         COLORS,
         squares: sixSquares(),
+        colorsArrayStr,
       };
     },
     components: {
@@ -250,6 +258,8 @@
     background #111
     margin 1rem 0
     display block
+    width 100%
+    white-space pre
 
   header aside
     width 50%
@@ -318,9 +328,14 @@
     padding 2rem 0
     background #1f1f1f
 
-  section#table-of-color-codes
+  section.table-and-array-of-codes
     color #ccc
     background #222
+    padding-top 0
+
+  section#table-of-color-codes
+    width 50%
+    padding-right 1rem
 
     table
       color #ccc
@@ -336,6 +351,10 @@
     .square
       width 18px
       height 18px
+
+  section#json-array-of-color-codes
+    width 50%
+    padding-left 1rem
 
   @media screen and (max-width: 60rem)
     .container
