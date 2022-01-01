@@ -20,7 +20,27 @@
     color-squares
     example
     prompt-example
-    color-table
+    section#table-of-color-codes
+      .container
+        h2 Table of color codes
+        p
+          | The colors in the table show the default xterm colors.
+          | If you've modified your terminal color scheme, the first
+          | 16 color codes will show up differently.
+        table.color-table
+          thead
+            tr
+              th color
+              th code
+              th hex
+              th ansi color code
+          tbody
+            tr(v-for="i in 256" :key="i")
+              td
+                square(:code="i - 1")
+              td {{ i-1 }}
+              td {{ COLORS[i-1] }}
+              td \e[38;5;{{ i - 1 }}m
   footer
     .container
       a(href="https://robotmoon.com") home
@@ -31,18 +51,21 @@
 <script>
   import ColorSpan from './components/ColorSpan.vue'
   import ColorSquares from './sections/ColorSquares.vue'
-  import ColorTable from './sections/ColorTable.vue'
   import Example from './sections/Example.vue'
   import PromptExample from './sections/PromptExample.vue'
+  import Square from './components/Square.vue'
+  import COLORS from './utils/colors'
 
   export default {
-    name: 'app',
+    data() {
+      return { COLORS };
+    },
     components: {
       ColorSpan,
       ColorSquares,
-      ColorTable,
+      Square,
       Example,
-      PromptExample
+      PromptExample,
     }
   }
 </script>
@@ -120,6 +143,25 @@
 
   .flex-responsive
     display flex
+
+  section#table-of-color-codes
+    color #ccc
+    background #222
+
+    table
+      color #ccc
+
+      th
+        text-align left
+        padding-right 30px
+        padding-bottom 10px
+
+      td
+        padding-right 30px
+
+    .square
+      width 18px
+      height 18px
 
   @media screen and (max-width: 60rem)
     .container
