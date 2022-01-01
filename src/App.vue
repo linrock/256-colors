@@ -44,6 +44,7 @@
   footer
     .container
       a(href="https://robotmoon.com") home
+      a(href="javascript:window.scrollTo(0,0)") back to top
       a(href="https://github.com/linrock/256-colors") source code
 
 </template>
