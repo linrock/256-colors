@@ -24,7 +24,7 @@ fs.copyFileSync(`./public/favicon.ico`, `${OUT_DIR}/favicon.ico`);
     return;
   }
   // get the html after rendering all JS templates
-  let finalHtml = `<html>${await page.evaluate(() => document.documentElement.innerHTML)}</html>`;
+  let finalHtml = `<!DOCTYPE html><html>${await page.evaluate(() => document.documentElement.innerHTML)}</html>`;
   // remove some html tags that we don't need
   const dom = new JSDOM(finalHtml);
   dom.window.document.
