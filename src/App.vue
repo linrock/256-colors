@@ -203,7 +203,7 @@
     font-family Courier, serif
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
-    color #2c3e50
+    color #e1e1e1
     margin 0
     padding 0
 
@@ -234,24 +234,26 @@
 
     a
       color inherit
+      opacity 0.9
       margin-right 2rem
+
+      &:hover
+        opacity 1
+
+  h1, h2, h3
+    font-size 1rem
+    margin 0
 
   h1
     color #9e9e9e
-    font-size 1rem
-    margin 0
 
   h2
     color #ddd
-    font-size 1rem
-    margin 0
     margin-bottom 1rem
     font-weight bold
 
   h3
     color #e4e4e4
-    font-size 1rem
-    margin 0
     margin-bottom 2rem
 
   code
@@ -273,17 +275,6 @@
 
   .flex-responsive
     display flex
-
-  section
-    padding 2rem 0
-
-    &.color-squares
-      letter-spacing -1px
-      background #222
-
-    &.color-text
-      letter-spacing -1px
-      background #1f1f1f
 
   .squares-256
     font-size 0.8rem
@@ -316,22 +307,31 @@
 
   aside
     width 50%
-    color white
     padding-right 2rem
     line-height 1.5rem
 
-  section#xterm-color-codes.example
-    color white
+  section
     padding 2rem 0
+
+    &.color-squares
+      letter-spacing -1px
+      background #222
+
+    &.color-text
+      letter-spacing -1px
+      background #1f1f1f
+
+  section#background-colors
+    .square
+      color #2c3e50
+
+  section#xterm-color-codes.example
     background #333
 
   section#shell-prompt
-    color white
-    padding 2rem 0
     background #1f1f1f
 
   section.table-and-array-of-codes
-    color #ccc
     background #222
     padding-top 0
 
@@ -344,15 +344,15 @@
 
       th
         text-align left
-        padding-right 30px
-        padding-bottom 10px
+        padding-right 1rem
+        padding-bottom 1rem
 
       td
-        padding-right 30px
+        padding-right 2rem
 
     .square
-      width 18px
-      height 18px
+      width 1rem
+      height 1rem
 
   section#json-array-of-color-codes
     width 50%
