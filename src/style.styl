@@ -1,0 +1,175 @@
+square-size = 2rem
+
+body
+  font-family Courier, serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  color #e1e1e1
+  margin 0
+  padding 0
+
+html
+  box-sizing border-box
+
+*
+  box-sizing inherit
+
+#splash
+  width 100vw
+  min-height 100vh
+  background black
+
+header
+  background #111
+  padding 2rem 0 1rem
+
+nav
+  color white
+  background #111
+  a
+    display block
+    padding-bottom 1rem
+    text-decoration none
+    &:hover span
+      color white !important
+
+footer
+  color white
+  background #111
+  padding 1rem 0
+
+  a
+    color inherit
+    opacity 0.9
+    margin-right 2rem
+
+    &:hover
+      opacity 1
+
+h1, h2, h3
+  font-size 1rem
+  margin 0
+
+h1
+  color #9e9e9e
+
+h2
+  color #ddd
+  margin-bottom 1rem
+  font-weight bold
+
+h3
+  color #e4e4e4
+  margin-bottom 2rem
+
+code
+  border-radius 3px
+  padding 1rem
+  background #111
+  margin 1rem 0
+  display block
+  width 100%
+  white-space pre
+
+header aside
+  width 50%
+
+.container
+  width 60rem
+  padding 2rem
+  margin 0 auto
+
+.flex-responsive
+  display flex
+
+.squares-256
+  font-size 0.8rem
+
+.container-width-8
+  width square-size * 8
+  height square-size *  2
+  margin-bottom square-size
+  display flex
+  flex-wrap wrap
+
+.container-6x6
+  width square-size * 6 * 2 + square-size
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+
+.s-6x6
+  width square-size * 6
+  height square-size * 6
+  display flex
+  flex-wrap wrap
+  margin-bottom square-size
+
+.square
+  width square-size
+  height square-size
+  text-align center
+  line-height square-size
+
+aside
+  width 50%
+  padding-right 2rem
+  line-height 1.5rem
+
+section
+  padding 2rem 0
+
+  &.color-squares
+    letter-spacing -1px
+    background #222
+
+  &.color-text
+    letter-spacing -1px
+    background #1f1f1f
+
+section#background-colors
+  .square
+    color #2c3e50
+
+section#xterm-color-codes.example
+  background #333
+
+section#shell-prompt
+  background #1f1f1f
+
+section.table-and-array-of-codes
+  background #222
+  padding-top 0
+
+section#table-of-color-codes
+  width 50%
+  padding-right 1rem
+
+  table
+    color #ccc
+
+    th
+      text-align left
+      padding-right 1rem
+      padding-bottom 1rem
+
+    td
+      padding-right 2rem
+
+  .square
+    width 1rem
+    height 1rem
+
+section#json-array-of-color-codes
+  width 50%
+  padding-left 1rem
+
+@media screen and (max-width: 60rem)
+  .container
+    width 100%
+    > *
+      width 100% !important
+
+  .flex-responsive
+    display block
+
