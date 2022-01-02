@@ -2,6 +2,9 @@
 
 This is a work-in-progress. See https://robotmoon.com/256-colors/
 
+<img src="https://user-images.githubusercontent.com/208617/147884040-8fc1e280-48fb-4ac6-9296-74ba3e29ee20.png"
+     width="500px"/>
+
 
 ## 256 colors in an array
 
