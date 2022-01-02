@@ -10,6 +10,14 @@
 #splash .squares-256 {
   margin: 0 auto;
   width: 36rem;
+  position: relative;
+}
+
+.floating-title {
+  position: absolute;
+  right: 0;
+  line-height: 2rem;
+  opacity: 50%;
 }
 
 #splash .squares-256 .s-6x6 {

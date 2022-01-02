@@ -3,6 +3,7 @@
   main
     section#splash
       .squares-256
+        .floating-title 256 colors
         .container-width-8
           square-div(v-for="i in 16" :key="i-1"
                      :code="i - 1" :class="{ dark: (i>7) && ![13,14].includes(i) }") {{ i - 1 }}
