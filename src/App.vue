@@ -7,14 +7,12 @@
         .container-width-8
           square-div(v-for="i in 16" :key="i-1"
                      :code="i - 1" :class="{ dark: (i>7) && ![13,14].includes(i) }") {{ i - 1 }}
-        .squares-6x6(style="width: 36rem; display: flex")
-          .s-6x6(v-for="i in 3" :key="`sq-${i}`")
+        .six-squares-6x6
+          .s-6x6(v-for="i in 6" :key="`sq-${i}`")
             square-div(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)"
+                       :class="{ dark: i > 3 }"
                        :code="squares[i-1][j-1]") {{ squares[i-1][j-1] }}
-        .squares-6x6(style="width: 36rem; display: flex")
-          .s-6x6(v-for="i in 3" :key="`sq-${i+3}`")
-            square-div.dark(v-for="j in 36" :key="16 + (i-1+3)*36 + (j-1)"
-                            :code="squares[i-1+3][j-1]") {{ squares[i-1+3][j-1] }}
+          .clear-left(style="clear: left")
         .container-width-8(style="margin-top: 2rem")
           square-div(v-for="i in 24" :key="231 + i"
                      :class="{ dark: i > 12 }"

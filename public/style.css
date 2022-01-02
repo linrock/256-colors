@@ -1,6 +1,7 @@
 #splash {
   display: flex;
   align-items: center;
+  padding: 2rem;
 }
 
 #splash .dark {
@@ -22,14 +23,16 @@
 
 #splash .squares-256 .s-6x6 {
   margin-bottom: 0;
+  float: left;
 }
 
-#splash .squares-256 .squares-6x6 {
+#splash .squares-256 .six-squares-6x6 {
   margin-bottom: 0;
+  width: 36rem;
 }
 
 @media screen and (max-width: 36rem) {
-  #splash .squares-256 {
+  #splash .squares-256 .six-squares-6x6 {
     width: 100%;
   }
 }
