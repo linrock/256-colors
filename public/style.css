@@ -3,6 +3,10 @@
   align-items: center;
 }
 
+#splash .dark {
+  color: #222
+}
+
 #splash .squares-256 {
   margin: 0 auto;
   width: 36rem;
