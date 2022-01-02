@@ -1,5 +1,3 @@
-square-size = 2rem
-
 body
   font-family Courier, serif
   -webkit-font-smoothing antialiased
@@ -114,9 +112,18 @@ header aside
 .squares-256
   font-size 0.8rem
 
+square-size = 2rem
+resp-square-size = 5vw
+
+.square
+  width square-size
+  height square-size
+  text-align center
+  line-height square-size
+  letter-spacing -0.5px
+
 .container-width-8
   width square-size * 8
-  height square-size *  2
   margin-bottom square-size
   display flex
   flex-wrap wrap
@@ -134,12 +141,24 @@ header aside
   flex-wrap wrap
   margin-bottom square-size
 
-.square
-  width square-size
-  height square-size
-  text-align center
-  line-height square-size
-  letter-spacing -0.5px
+@media screen and (max-width: 36rem)
+  .square
+    width resp-square-size
+    height resp-square-size
+    line-height resp-square-size
+    font-size (resp-square-size / 2.5)
+
+  .container-width-8
+    width resp-square-size * 8
+    margin-bottom resp-square-size
+
+  .container-6x6
+    width resp-square-size * 6 * 2 + resp-square-size
+
+  .one-square-6x6
+    width resp-square-size * 6
+    height resp-square-size * 6
+    margin-bottom resp-square-size
 
 aside
   width 50%
