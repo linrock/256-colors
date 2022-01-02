@@ -5,9 +5,10 @@
       .floating-title 256 colors
       .container-width-8
         square-div(v-for="i in 16" :key="i-1"
-                   :code="i - 1" :class="{ dark: (i>7) && ![13,14].includes(i) }") {{ i - 1 }}
+                   :class="{ dark: (i>7) && ![13,14].includes(i) }"
+                   :code="i - 1") {{ i - 1 }}
       .six-squares-6x6
-        .s-6x6(v-for="i in 6" :key="`sq-${i}`")
+        .one-square-6x6(v-for="i in 6" :key="`sq-${i}`")
           square-div(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)"
                      :class="{ dark: i > 3 }"
                      :code="squares[i-1][j-1]") {{ squares[i-1][j-1] }}
@@ -55,7 +56,7 @@
             square-div(v-for="i in 16" :key="i-1"
                        :code="i - 1") {{ i - 1 }}
           .container-6x6
-            .s-6x6(v-for="i in 6" :key="`sq-${i}`")
+            .one-square-6x6(v-for="i in 6" :key="`sq-${i}`")
               square-div(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)"
                          :code="squares[i-1][j-1]") {{ squares[i-1][j-1] }}
           .container-width-8
@@ -88,7 +89,7 @@
             color-text(v-for="i in 16" :key="i-1"
                        :code="i-1")
           .container-6x6
-            .s-6x6(v-for="i in 6" :key="`sq-${i}`")
+            .one-square-6x6(v-for="i in 6" :key="`sq-${i}`")
               color-text(v-for="j in 36"
                          :key="16 + (i-1)*36 + (j-1)"
                          :code="squares[i-1][j-1]")
