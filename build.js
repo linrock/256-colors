@@ -11,6 +11,7 @@ if (!fs.existsSync(OUT_DIR)) {
   fs.mkdirSync(OUT_DIR);
 }
 fs.copyFileSync(`./public/favicon.ico`, `${OUT_DIR}/favicon.ico`);
+fs.copyFileSync(`./public/style.css`, `${OUT_DIR}/style.css`);
 
 (async () => {
   const browser = await puppeteer.launch();
