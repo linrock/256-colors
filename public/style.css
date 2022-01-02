@@ -1,0 +1,12 @@
+body {
+  background: green;
+}
+
+#splash .squares-256 {
+  margin: 0 auto;
+  width: 36rem;
+}
+
+#splash .squares-256 .s-6x6 {
+  margin-bottom: 0;
+}
