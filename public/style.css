@@ -1,5 +1,6 @@
-body {
-  background: green;
+#splash {
+  display: flex;
+  align-items: center;
 }
 
 #splash .squares-256 {
@@ -9,4 +10,14 @@ body {
 
 #splash .squares-256 .s-6x6 {
   margin-bottom: 0;
+}
+
+#splash .squares-256 .squares-6x6 {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 36rem) {
+  #splash .squares-256 {
+    width: 100%;
+  }
 }
