@@ -18,6 +18,35 @@ html
   width 100vw
   min-height 100vh
   background black
+  display flex
+  align-items center
+  padding 2rem
+
+  .dark
+    color #222
+
+  .squares-256
+    margin 0 auto
+    width 36rem
+    position relative
+
+    .six-squares-6x6
+      margin-bottom: 0;
+      width: 36rem;
+
+  .floating-title
+    position absolute
+    right 0
+    line-height 2rem
+    opacity 50%
+
+  .s-6x6
+    margin-bottom: 0;
+    float: left;
+
+@media screen and (max-width: 36rem)
+  #splash .squares-256 .six-squares-6x6
+    width: 100%;
 
 header
   background #111
