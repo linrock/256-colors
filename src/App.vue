@@ -5,17 +5,17 @@
       .floating-title 256 colors
       .container-width-8
         square-div(v-for="i in 16" :key="i-1"
-                   :class="{ dark: (i>7) && ![13,14].includes(i) }"
+                   :class="{ 'dark-text': (i>7) && ![13,14].includes(i) }"
                    :code="i - 1") {{ i - 1 }}
       .six-squares-6x6
         .one-square-6x6(v-for="i in 6" :key="`sq-${i}`")
           square-div(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)"
-                     :class="{ dark: i > 3 }"
+                     :class="{ 'dark-text': i > 3 }"
                      :code="squares[i-1][j-1]") {{ squares[i-1][j-1] }}
         .clear-left(style="clear: left")
       .container-width-12(style="margin-top: 2rem")
         square-div(v-for="i in 24" :key="231 + i"
-                   :class="{ dark: i > 12 }"
+                   :class="{ 'dark-text': i > 12 }"
                    :code="231 + i") {{ 231 + i }}
   main
     header
@@ -54,13 +54,16 @@
         .squares-256
           .container-width-8
             square-div(v-for="i in 16" :key="i-1"
+                       :class="{ 'dark-text': (i>7) && ![13,14].includes(i) }"
                        :code="i - 1") {{ i - 1 }}
           .container-6x6
             .one-square-6x6(v-for="i in 6" :key="`sq-${i}`")
               square-div(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)"
+                         :class="{ 'dark-text': i > 3 }"
                          :code="squares[i-1][j-1]") {{ squares[i-1][j-1] }}
           .container-width-12
             square-div(v-for="i in 24" :key="231 + i"
+                       :class="{ 'dark-text': i > 12 }"
                        :code="231 + i") {{ 231 + i }}
 
     section#foreground-colors.color-text
