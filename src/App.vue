@@ -25,17 +25,17 @@
           h3 A guide to using colors in text terminals
         nav
           a(href="#background-colors")
-            color-span(code="202") Background colors
+            color-span(:code="202") Background colors
           a(href="#foreground-colors")
-            color-span(code="208") Foreground colors
+            color-span(:code="208") Foreground colors
           a(href="#xterm-color-codes")
-            color-span(code="214") Using xterm color codes
+            color-span(:code="214") Using xterm color codes
           a(href="#shell-prompt")
-            color-span(code="220") Color codes in a shell prompt
+            color-span(:code="220") Color codes in a shell prompt
           a(href="#table-of-color-codes")
-            color-span(code="226") Table of color codes
+            color-span(:code="226") Table of color codes
           a(href="#json-array-of-color-codes")
-            color-span(code="229") JSON array of color codes
+            color-span(:code="229") JSON array of color codes
     section#background-colors.color-squares
       .container.flex-responsive
         aside
