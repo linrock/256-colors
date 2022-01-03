@@ -13,7 +13,7 @@
                      :class="{ dark: i > 3 }"
                      :code="squares[i-1][j-1]") {{ squares[i-1][j-1] }}
         .clear-left(style="clear: left")
-      .container-width-8(style="margin-top: 2rem")
+      .container-width-12(style="margin-top: 2rem")
         square-div(v-for="i in 24" :key="231 + i"
                    :class="{ dark: i > 12 }"
                    :code="231 + i") {{ 231 + i }}
@@ -59,7 +59,7 @@
             .one-square-6x6(v-for="i in 6" :key="`sq-${i}`")
               square-div(v-for="j in 36" :key="16 + (i-1)*36 + (j-1)"
                          :code="squares[i-1][j-1]") {{ squares[i-1][j-1] }}
-          .container-width-8
+          .container-width-12
             square-div(v-for="i in 24" :key="231 + i"
                        :code="231 + i") {{ 231 + i }}
 
