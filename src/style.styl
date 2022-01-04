@@ -39,10 +39,6 @@ html
     margin-bottom: 0;
     float: left;
 
-@media screen and (max-width: 36rem)
-  #splash .squares-256 .six-squares-6x6
-    width: 100%;
-
 .dark-text
   color #222
 
@@ -147,6 +143,12 @@ resp-square-size = 6vw
   margin-bottom square-size
 
 @media screen and (max-width: 36rem)
+  #splash
+    min-height: auto
+
+    .squares-256 .six-squares-6x6
+      width: 100%;
+
   .square
     width resp-square-size
     height resp-square-size
