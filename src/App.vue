@@ -22,7 +22,7 @@
       .container.flex-responsive
         aside
           h1 xterm 256 colors
-          h3 A guide to using colors in text terminals
+          h3 Using colors in text terminals
         nav
           a(href="#background-colors")
             color-span(:code="202") Background colors
