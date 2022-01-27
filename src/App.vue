@@ -32,6 +32,8 @@
             color-span(:code="214") Using xterm color codes
           a(href="#shell-prompt")
             color-span(:code="220") Color codes in a shell prompt
+          a(href="#bash-prompt-colors")
+            color-span(:code="220") Using colors in bash prompts
           a(href="#table-of-color-codes")
             color-span(:code="226") Table of color codes
           a(href="#json-array-of-color-codes")
@@ -157,6 +159,30 @@
           | Which gives you this when in the home directory
         code
           color-span(:code="82") ~ $
+    section#bash-prompt-colors
+      .container
+        h2 Using colors in bash prompts
+        div
+          | Here's another example of a bash prompt with colors
+        code
+          | export PS1="\[$(tput setaf 34)\]\u\[$(tput setaf 40)\]@\[$(tput setaf 46)\]\h \[$(tput setaf 154)\]\w \[$(tput sgr0)\]$ "
+        div
+          | The above prompt will look like this
+        code
+          color-span(:code="34") user
+          color-span(:code="40") @
+          color-span(:code="46") hostname
+          | 
+          color-span(:code="154") ~/path/to/directory
+          | 
+          | $
+        div
+          | For a way to try out different colors in a bash prompt, try going
+          | to this
+          br
+          |
+          a(href="https://robotmoon.com/bash-prompt-generator") bash prompt generator
+
     section.table-and-array-of-codes
       .container.flex-responsive
         section#table-of-color-codes
