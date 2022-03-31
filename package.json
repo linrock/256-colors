@@ -18,11 +18,9 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.0.0",
     "eslint-plugin-vue": "^8.2.0",
-    "js-beautify": "^1.14.0",
-    "jsdom": "^19.0.0",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
-    "puppeteer": "^13.0.1",
+    "snapshot-url": "^0.0.5",
     "stylus": "^0.56.0",
     "stylus-loader": "^3.0.2",
     "vue-loader": "^16.8.3"
