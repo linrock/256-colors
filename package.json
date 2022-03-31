@@ -24,5 +24,8 @@
     "stylus": "^0.56.0",
     "stylus-loader": "^3.0.2",
     "vue-loader": "^16.8.3"
+  },
+  "babel": {
+    "presets": ["@vue/app"]
   }
 }
